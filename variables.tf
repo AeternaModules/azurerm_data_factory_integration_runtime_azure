@@ -18,11 +18,11 @@ EOT
     data_factory_id         = string
     location                = string
     name                    = string
-    cleanup_enabled         = optional(bool, true)
-    compute_type            = optional(string, "General")
-    core_count              = optional(number, 8)
+    cleanup_enabled         = optional(bool)   # Default: true
+    compute_type            = optional(string) # Default: "General"
+    core_count              = optional(number) # Default: 8
     description             = optional(string)
-    time_to_live_min        = optional(number, 0)
+    time_to_live_min        = optional(number) # Default: 0
     virtual_network_enabled = optional(bool)
   }))
 }
