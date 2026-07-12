@@ -1,3 +1,7 @@
+output "data_factory_integration_runtime_azures_id" {
+  description = "Map of id values across all data_factory_integration_runtime_azures, keyed the same as var.data_factory_integration_runtime_azures"
+  value       = { for k, v in azurerm_data_factory_integration_runtime_azure.data_factory_integration_runtime_azures : k => v.id }
+}
 output "data_factory_integration_runtime_azures_cleanup_enabled" {
   description = "Map of cleanup_enabled values across all data_factory_integration_runtime_azures, keyed the same as var.data_factory_integration_runtime_azures"
   value       = { for k, v in azurerm_data_factory_integration_runtime_azure.data_factory_integration_runtime_azures : k => v.cleanup_enabled }
